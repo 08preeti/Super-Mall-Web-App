@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>User Dashboard</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Super Mall - User Panel</h1>
+
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+  <div class="card">
+    <h2>Shops</h2>
+    <ul id="shopList"></ul>
+  </div>
+
+
+  <select id="floorFilter">
+    <option value="all">All Floors</option>
+  </select>
+
+  <select id="shopFilter">
+     <option value="all">All Shops</option>
+  </select>
+
+  <div class="card">
+  <h2>Products</h2>
+  <select id="shopFilter">
+     <option value="all">All Shops</option>
+  </select>
+
+
+  <div class="card">
+  <h2>Compare Products</h2>
+  <div id="compareSection"></div>
+</div>
+
+
+
+  <select id="categoryFilter">
+     <option value="all">All Categories</option>
+  </select>
+
+  <div id="productContainer" class="card-container"></div>
+</div>
+
+  <div class="card">
+  <h2>Cart</h2>
+  <ul id="cartList"></ul>
+  <h3>Total: ₹<span id="cartTotal">0</span></h3>
+  <button onclick="checkout()">Checkout</button>
+</div>
+
+  <div class="card">
+    <h2>Offers</h2>
+    <ul id="offerList"></ul>
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="../js/firebase-config.js"></script>
+<script src="../js/user.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>Super Mall Admin Panel</h1>
+
+  <div class="card">
+  <h2>Dashboard Statistics</h2>
+  <div class="stats-container">
+    <div class="stat-box">
+      <h3 id="totalShops">0</h3>
+      <p>Total Shops</p>
+    </div>
+
+    <div class="stat-box">
+      <h3 id="totalProducts">0</h3>
+      <p>Total Products</p>
+    </div>
+
+    <div class="stat-box">
+      <h3 id="totalOffers">0</h3>
+      <p>Total Offers</p>
+    </div>
+
+    <div class="stat-box">
+      <h3 id="totalUsers">0</h3>
+      <p>Total Users</p>
+    </div>
+
+    <div class="stat-box">
+      <h3 id="totalLogs">0</h3>
+      <p>Total Logs</p>
+    </div>
+
+    <div class="stat-box">
+      <h3 id="totalRevenue">₹0</h3>
+      <p>Total Revenue</p>
+    </div>
+  </div>
+</div>
+
+  <button class="logout-btn" onclick="logout()">Logout</button>
+
+  <div class="card">
+    <h2>Add Shop</h2>
+
+    <div class="form-row">
+      <input type="text" id="shopName" placeholder="Shop Name">
+      <input type="text" id="shopLocation" placeholder="Location">
+
+      <input type="number" id="shopFloor" placeholder="Floor Number" required>
+      <button onclick="addShop()">Add Shop</button>
+    </div>
+
+    <ul id="shopList"></ul>
+  </div>
+
+  <div class="card">
+    <h2>Add Product</h2>
+
+    <div class="form-row">
+      <input type="text" id="productName" placeholder="Product Name">
+      <input type="number" id="productPrice" placeholder="Price">
+      <input type="text" id="productCategory" placeholder="Category">
+      <select id="productShop"></select>
+      <button onclick="addProduct()">Add Product</button>
+    </div>
+
+    <ul id="productList"></ul>
+  </div>
+
+  <div class="card">
+    <h2>Add Offer</h2>
+
+    <div class="form-row">
+      <input type="text" id="offerTitle" placeholder="Offer Title">
+      <input type="number" id="offerDiscount" placeholder="Discount %">
+      <input type="date" id="offerValidTill">
+      <select id="offerShop"></select>
+      <button onclick="addOffer()">Add Offer</button>
+    </div>
+
+    <ul id="offerList"></ul>
+  </div>
+
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<script src="../js/firebase-config.js"></script>
+<script src="../js/admin.js"></script>
+
+</body>
+</html> 
