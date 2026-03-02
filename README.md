@@ -1,5 +1,7 @@
 # 🏬 Super Mall Management System
 
+Live Demo: https://super-mall-web-app-2966c.web.app
+
 A web-based mall management system built using HTML, CSS, JavaScript and Firebase.
 
 ## 🚀 Features
